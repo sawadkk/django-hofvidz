@@ -1,0 +1,12 @@
+{% extends 'halls/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<h2>login</h2>
+	<form method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<button type="submit">login</button>
+	</form>
+</div>
+{% endblock %}
